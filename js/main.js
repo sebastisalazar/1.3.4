@@ -73,16 +73,16 @@ Escribe una función llamada esDivisiblePorCinco que reciba un número y devuelv
 
 function esDivisiblePorCinco(num){
 
-    let mensake;
+    let mensaje;
     if(num%5==0 && num!=0){
-        mensaje="Es divisible por 5";
-        return mensaje
+        mensaje=true;
     }else{
-        return false;
+        mensaje=false;
     }
+    return mensaje;
 }
 
-console.log(esDivisiblePorCinco(15));
+console.log(esDivisiblePorCinco(2));
 
 
 /*Ejercicio 5: Clasificar nota de examen
