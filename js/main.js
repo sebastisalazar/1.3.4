@@ -93,18 +93,19 @@ function clasificarNota(num){
 
     let mensaje;
 
-    switch (num){
-        case num>=90: mensaje="Excelente";
-            break;
-        case num>=70 && num<90: mensaje="Buena";
-            break;
-        case num>=50 && num<70: mensaje="Regular";
-            break;
-        default: mensaje="Insuficiente";
-    }
+        if(num<50){
+            mensaje="Insuficiente";
+        }else if (num>=50 && num<70){
+            mensaje="Regular";
+        }else if(num>=70 && num<90){
+            mensaje="Buena";
+        } else if(num>=90){
+            mensaje="Excelente"
+        }
+    
 
     return mensaje;
 }
 
-console.log(clasificarNota());
+console.log(clasificarNota(51));
 
